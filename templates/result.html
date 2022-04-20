@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark p-2">
+        <div class="container">
+            <span class="navbar-brand m-0 h1">Personal Loan Modeling</span>
+            <ul class="navbar-nav flex-row">
+                <li class="nav-item pe-3">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item pe-3">
+                    <a class="nav-link" href="/file">File</a>
+                </li>
+                <li class="nav-item pe-3">
+                    <a class="nav-link" href="/process">Results</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <h3>{{result}}</h3>
+
+        <table class="table mb-3">
+            <thead>
+                <tr>
+                    <th scope="col">Age</th>
+                    <th scope="col">Experience</th>
+                    <th scope="col">Income</th>
+                    <th scope="col">ZIP Code</th>
+                    <th scope="col">Family</th>
+                    <th scope="col">CCAvg</th>
+                    <th scope="col">Education</th>
+                    <th scope="col">Mortgage</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{form["age"]}}</td>
+                    <td>{{form["experience"]}}</td>
+                    <td>{{form["income"]}}</td>
+                    <td>{{form["ZIP_code"]}}</td>
+                    <td>{{form["family_size"]}}</td>
+                    <td>{{form["CCAvg"]}}</td>
+                    <td>{{form["education"]}}</td>
+                    <td>{{form["mortgage"]}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+
+
+</html>
