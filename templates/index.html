@@ -31,7 +31,7 @@
         <h4>Prediction: {{prediction}}</h4>
         <h4 class="mb-3">Prediction probability: {{predict_proba}}%</h4>
         <div class="table-responsive-xxl table-wrapper-scroll-y my-custom-scrollbar">
-            <table class="mb-3 table table-borderless">
+            <table class="mb-4 table table-borderless">
                 <thead>
                     <tr>
                         <th scope="col">Age</th>
@@ -66,18 +66,6 @@
                 </tbody>
             </table>
         </div>
-        <!-- <h6 class="mb-3">Age: {{data[0]}}</h6>
-        <h6 class="mb-3">Experience: {{data[1]}}</h6>
-        <h6 class="mb-3">Income: {{data[2]}}</h6>
-        <h6 class="mb-3">ZIPCode: {{data[3]}}</h6>
-        <h6 class="mb-3">Family: {{data[4]}}</h6>
-        <h6 class="mb-3">CCAvg: {{data[5]}}</h6>
-        <h6 class="mb-3">Education: {{data[6]}}</h6>
-        <h6 class="mb-3">Mortgage: {{data[7]}}</h6>
-        <h6 class="mb-3">SecuritiesAccount: {{data[8]}}</h6>
-        <h6 class="mb-3">CDAccount: {{data[9]}}</h6>
-        <h6 class="mb-3">Online: {{data[10]}}</h6>
-        <h6 class="mb-3">CreditCard: {{data[11]}}</h6> -->
         {% endif %}
 
         <form action="/process" method="POST" class="needs-validation">

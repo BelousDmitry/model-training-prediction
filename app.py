@@ -16,8 +16,8 @@ def getFile():
     len = 0
     if request.method == 'POST':
         len = int(request.form.get('len'))
-    myData = df.head(len).values
-    return render_template('csvFile.html', items = myData)
+    items = df.head(len).values
+    return render_template('csvFile.html', items = items)
 
 @app.route('/process', methods=['GET', 'POST'])
 def receiveData():

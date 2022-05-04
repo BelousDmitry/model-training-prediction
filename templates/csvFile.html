@@ -51,6 +51,7 @@
             </div>
         </form>
 
+        {% if items.any() %}
         <div class="table-responsive-xxl table-wrapper-scroll-y my-custom-scrollbar">
             <table class="mb-3 table table-striped table-hover">
                 <thead class="table-dark">
@@ -94,6 +95,7 @@
                 </tbody>
             </table>
         </div>
+        {% endif %}
     </div>
 
 
