@@ -4,7 +4,6 @@ import pickle
 import numpy as np
 
 app = Flask(__name__)
-df = pd.read_csv('Bank_Personal_Loan_Modelling.csv')
 
 
 @app.route('/', methods=['GET'])
@@ -13,6 +12,7 @@ def index():
 
 @app.route('/file', methods=['GET', 'POST'])
 def getFile():
+    df = pd.read_csv('Bank_Personal_Loan_Modelling.csv')
     len = 0
     if request.method == 'POST':
         len = int(request.form.get('len'))
@@ -62,6 +62,7 @@ def processData(data):
     else:
         data[11] = "Yes"
     return data
+
 
 if __name__ == "__main__":
     app.run(debug=True)
