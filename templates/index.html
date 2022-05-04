@@ -27,8 +27,58 @@
 
     <div class="container my-4">
 
+        {% if prediction %}
         <h4>Prediction: {{prediction}}</h4>
         <h4 class="mb-3">Prediction probability: {{predict_proba}}%</h4>
+        <div class="table-responsive-xxl table-wrapper-scroll-y my-custom-scrollbar">
+            <table class="mb-3 table table-borderless">
+                <thead>
+                    <tr>
+                        <th scope="col">Age</th>
+                        <th scope="col">Experience</th>
+                        <th scope="col">Income</th>
+                        <th scope="col">ZIP Code</th>
+                        <th scope="col">Family</th>
+                        <th scope="col">CCAvg</th>
+                        <th scope="col">Education</th>
+                        <th scope="col">Mortgage</th>
+                        <th scope="col">Securities Account</th>
+                        <th scope="col">CD Account</th>
+                        <th scope="col">Online facilities</th>
+                        <th scope="col">CreditCard</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{data[0]}}</td>
+                        <td>{{data[1]}}</td>
+                        <td>{{data[2]}}$</td>
+                        <td>{{data[3]}}</td>
+                        <td>{{data[4]}}</td>
+                        <td>{{data[5]}}$</td>
+                        <td>{{data[6]}}</td>
+                        <td>{{data[7]}}$</td>
+                        <td>{{data[8]}}</td>
+                        <td>{{data[9]}}</td>
+                        <td>{{data[10]}}</td>
+                        <td>{{data[11]}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- <h6 class="mb-3">Age: {{data[0]}}</h6>
+        <h6 class="mb-3">Experience: {{data[1]}}</h6>
+        <h6 class="mb-3">Income: {{data[2]}}</h6>
+        <h6 class="mb-3">ZIPCode: {{data[3]}}</h6>
+        <h6 class="mb-3">Family: {{data[4]}}</h6>
+        <h6 class="mb-3">CCAvg: {{data[5]}}</h6>
+        <h6 class="mb-3">Education: {{data[6]}}</h6>
+        <h6 class="mb-3">Mortgage: {{data[7]}}</h6>
+        <h6 class="mb-3">SecuritiesAccount: {{data[8]}}</h6>
+        <h6 class="mb-3">CDAccount: {{data[9]}}</h6>
+        <h6 class="mb-3">Online: {{data[10]}}</h6>
+        <h6 class="mb-3">CreditCard: {{data[11]}}</h6> -->
+        {% endif %}
 
         <form action="/process" method="POST" class="needs-validation">
 
@@ -40,7 +90,8 @@
             <div class="mb-3">
                 <h6><label for="experience" class="form-label">Number of years of professional
                         experience</label></h6>
-                <input class="form-control" name="experience" type="number" id="experience" placeholder="experience" required>
+                <input class="form-control" name="experience" type="number" id="experience" placeholder="experience"
+                    required>
             </div>
 
             <h6><label for="income" class="form-label">Annual income of the customer ($000)</label></h6>
@@ -57,14 +108,16 @@
 
             <div class="mb-3">
                 <h6><label for="family_size" class="form-label">Family size of the customer</label></h6>
-                <input class="form-control" name="family_size" type="number" id="family_size" placeholder="Family size" required>
+                <input class="form-control" name="family_size" type="number" id="family_size" placeholder="Family size"
+                    required>
             </div>
 
             <h6><label for="CCAvg" class="form-label">Avg. spending on credit cards per month ($000)</label>
             </h6>
             <div class="input-group mb-3">
                 <span class="input-group-text">$</span>
-                <input class="form-control" name="CCAvg" type="number" step="any" id="CCAvg" placeholder="CCAvg" required>
+                <input class="form-control" name="CCAvg" type="number" step="any" id="CCAvg" placeholder="CCAvg"
+                    required>
                 <span class="input-group-text">.000</span>
             </div>
 
